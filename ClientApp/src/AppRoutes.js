@@ -1,5 +1,5 @@
 import { Register } from "./components/Register";
-import { FetchData } from "./components/FetchData";
+import { About } from "./components/About";
 import { Home } from "./components/Home";
 
 const AppRoutes = [
@@ -12,8 +12,8 @@ const AppRoutes = [
     element: <Register />
   },
   {
-    path: '/fetch-data',
-    element: <FetchData />
+    path: '/about',
+    element: <About />
   }
 ];
 
