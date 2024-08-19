@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-export class FetchData extends Component {
-  static displayName = FetchData.name;
+export class About extends Component {
+  static displayName = About.name;
 
   constructor(props) {
     super(props);
@@ -40,14 +40,23 @@ export class FetchData extends Component {
   render() {
     let contents = this.state.loading
       ? <p><em>Loading...</em></p>
-      : FetchData.renderForecastsTable(this.state.forecasts);
+      : About.renderForecastsTable(this.state.forecasts);
 
     return (
       <div>
-        <h1 id="tabelLabel" >Weather forecast</h1>
-        <p>This component demonstrates fetching data from the server.</p>
+        <h1 id="tabelLabel" >About The New University App:</h1>
+        <p>This is a demo learning app for "Simple University/Organization", and a "Full Stack Web Project" using:</p>
+        <ul>
+            <li>The .NET framework,and C# for server-side code</li>
+            <li>EF core and mySQL for Database.</li>
+            <li>React.js for client-side code.</li>
+            <li>Bootstrap for layout and styling.</li>
+        </ul>
+        <p>Feel free to discover more of my projects on: <a href='https://github.com/AsmaaJAH'>My Github</a><a> .</a> </p>
+
         {contents}
       </div>
+
     );
   }
 
