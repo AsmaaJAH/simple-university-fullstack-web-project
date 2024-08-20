@@ -14,6 +14,6 @@ The Last updated Branch I used was the **"Feature/apply_page"**, which will be c
 
 Feel free to check a **video** of the current version of it until now:
 ----------------------------------------------------
-https://drive.google.com/file/d/1iiXcC53zlJ7a9rdCg_Xix6FDiXswoAh6/view?usp=sharing
+https://drive.google.com/file/d/1iiXcC53zlJ7a9rdCg_Xix6FDiXswoAh6/
 
 
