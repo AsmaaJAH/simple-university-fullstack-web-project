@@ -8,10 +8,10 @@ namespace university.Models
         public int Id { get; set; }
         
         [Required]
-        public string Name { get; set; }
+        public string Name { get; set; }= string.Empty;
         
         [Required]
-        public string StudentId { get; set; }
+        public string StudentId { get; set; }= string.Empty;
         
         [Required]
         public bool ZewailStudent { get; set; }

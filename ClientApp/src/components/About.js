@@ -52,8 +52,10 @@ export class About extends Component {
             <li>React.js for client-side code.</li>
             <li>Bootstrap for layout and styling.</li>
         </ul>
-        <p>Feel free to discover more of my projects on: <a href='https://github.com/AsmaaJAH'>My Github</a><a> .</a> </p>
-
+        <p>
+          Feel free to discover more of my projects on: 
+          <a href='https://github.com/AsmaaJAH'>My Github</a>.
+        </p>
         {contents}
       </div>
 

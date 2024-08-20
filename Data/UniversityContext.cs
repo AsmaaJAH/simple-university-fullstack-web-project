@@ -9,6 +9,6 @@ namespace university.Data
         {
         }
 
-        public DbSet<StudentRegistration> StudentRegistrations { get; set; }
+        public DbSet<StudentRegistration> StudentRegistrations { get; set; }= null!; // it will be initialized by EF Core
     }
 }
