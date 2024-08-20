@@ -19,8 +19,7 @@ export class About extends Component {
           <tr>
             <th>Date</th>
             <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
+            <th>Weather Summary</th>
           </tr>
         </thead>
         <tbody>
@@ -28,7 +27,6 @@ export class About extends Component {
             <tr key={forecast.date}>
               <td>{forecast.date}</td>
               <td>{forecast.temperatureC}</td>
-              <td>{forecast.temperatureF}</td>
               <td>{forecast.summary}</td>
             </tr>
           )}
@@ -47,16 +45,19 @@ export class About extends Component {
         <h1 id="tabelLabel" >About The New University App:</h1>
         <p>This is a demo learning app for "Simple University/Organization", and a MVC "Full Stack Web Project" using:</p>
         <ul>
-            <li>The .NET framework,and C# for server-side code</li>
-            <li>EF core and mySQL for Database.</li>
-            <li>React.js for client-side code.</li>
+            <li>React.js for client-side code, incorporating HTML (JSX in React), CSS, and JavaScript.</li>
             <li>Bootstrap for layout and styling.</li>
-            <li>Postman to test APIs.</li>
+            <li>Node.js for managing npm packages and facilitating complex, scalable React applications.</li>
+            <li>The .NET Framework and C# for server-side code.</li>
+            <li>Entity Framework Core (EF Core) and SQL for the database.</li>
+            <li>Postman for testing APIs</li>
         </ul>
         <p>
           Feel free to discover more of my projects on: 
           <a href='https://github.com/AsmaaJAH'>My Github</a>.
         </p>
+        <h1 id="tabelLabel" >The Weather In the University:</h1>
+
         {contents}
       </div>
 

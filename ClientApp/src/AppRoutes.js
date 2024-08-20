@@ -1,4 +1,4 @@
-import { Register } from "./components/Register";
+import { Registration } from "./components/Registration";
 import { About } from "./components/About";
 import { Home } from "./components/Home";
 
@@ -8,8 +8,8 @@ const AppRoutes = [
     element: <Home />
   },
   {
-    path: '/register',
-    element: <Register />
+    path: '/registration',
+    element: <Registration />
   },
   {
     path: '/about',

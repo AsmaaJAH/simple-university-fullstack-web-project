@@ -1,13 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using university.Data;
-using university.Models;
 using System.Threading.Tasks;
 
 namespace university.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("registration")]
     public class RegistrationController : ControllerBase
     {
         private readonly UniversityContext _context;
@@ -18,16 +16,16 @@ namespace university.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostRegistration([FromBody] StudentRegistration registration)
+        public async Task<IActionResult> PostRegistration([FromBody] Registration registration)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                _context.Registrations.Add(registration);
+                await _context.SaveChangesAsync();
+                return Ok();
             }
-
-            _context.StudentRegistrations.Add(registration);
-            await _context.SaveChangesAsync();
-            return Ok(registration);
+            return BadRequest(ModelState);
         }
     }
 }
+

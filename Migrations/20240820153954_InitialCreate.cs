@@ -13,20 +13,18 @@ namespace university.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "StudentRegistrations",
+                name: "Registrations",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "longtext", nullable: false),
-                    StudentId = table.Column<string>(type: "longtext", nullable: false),
-                    ZewailStudent = table.Column<bool>(type: "tinyint(1)", nullable: false),
-                    AcademicYear = table.Column<int>(type: "int", nullable: false),
-                    ApplyCount = table.Column<int>(type: "int", nullable: false)
+                    ZewailEmail = table.Column<string>(type: "longtext", nullable: false),
+                    AcademicYear = table.Column<string>(type: "longtext", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_StudentRegistrations", x => x.Id);
+                    table.PrimaryKey("PK_Registrations", x => x.Id);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
         }
@@ -34,7 +32,7 @@ namespace university.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "StudentRegistrations");
+                name: "Registrations");
         }
     }
 }

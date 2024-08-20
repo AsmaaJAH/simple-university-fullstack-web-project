@@ -10,7 +10,7 @@ using university.Data;
 namespace university.Migrations
 {
     [DbContext(typeof(UniversityContext))]
-    [Migration("20240820001827_InitialCreate")]
+    [Migration("20240820153954_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,32 +20,27 @@ namespace university.Migrations
                 .HasAnnotation("ProductVersion", "6.0.25")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("university.Models.StudentRegistration", b =>
+            modelBuilder.Entity("university.Data.Registration", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("AcademicYear")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ApplyCount")
-                        .HasColumnType("int");
+                    b.Property<string>("AcademicYear")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("StudentId")
+                    b.Property<string>("ZewailEmail")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<bool>("ZewailStudent")
-                        .HasColumnType("tinyint(1)");
-
                     b.HasKey("Id");
 
-                    b.ToTable("StudentRegistrations");
+                    b.ToTable("Registrations");
                 });
 #pragma warning restore 612, 618
         }
