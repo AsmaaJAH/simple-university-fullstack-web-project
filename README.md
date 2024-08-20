@@ -3,17 +3,10 @@
 Simple University/Organization,  MVC Full Stack Web Project using:
 
 
-.NET framework,and C# for server-side code
+- **.NET Framework and C#** for server-side code.
+- **Entity Framework Core (EF Core)** and **MySQL** for the database.
+- **Postman** for testing APIs.
+- **React.js** for client-side code, incorporating **HTML (JSX in React), CSS, and JavaScript**.
+- **Bootstrap** for layout and styling.
+- **Node.js** for managing npm packages and facilitating complex, scalable React applications.
 
-EF core and mySQL for Database.
-
-
-
-React.js for client-side code.
-
-Bootstrap for layout and styling.
-
-
-Node.Js to use npm to make it easier dealing with React complex scalable applications.
-
-Postman to test APIs
