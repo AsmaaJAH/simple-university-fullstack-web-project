@@ -45,12 +45,13 @@ export class About extends Component {
     return (
       <div>
         <h1 id="tabelLabel" >About The New University App:</h1>
-        <p>This is a demo learning app for "Simple University/Organization", and a "Full Stack Web Project" using:</p>
+        <p>This is a demo learning app for "Simple University/Organization", and a MVC "Full Stack Web Project" using:</p>
         <ul>
             <li>The .NET framework,and C# for server-side code</li>
             <li>EF core and mySQL for Database.</li>
             <li>React.js for client-side code.</li>
             <li>Bootstrap for layout and styling.</li>
+            <li>Postman to test APIs.</li>
         </ul>
         <p>
           Feel free to discover more of my projects on: 
