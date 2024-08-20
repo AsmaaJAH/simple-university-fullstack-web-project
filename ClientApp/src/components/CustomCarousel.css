@@ -1,0 +1,12 @@
+.custom-carousel-container {
+    border-radius: 5px; 
+    overflow: hidden; /* Ensures images fit within the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .custom-carousel-image {
+    object-fit: fill; /* Maintain aspect ratio and cover the container */
+    height: 90vh; 
+
+  }
+  

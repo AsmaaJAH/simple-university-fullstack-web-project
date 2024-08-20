@@ -44,6 +44,9 @@ export class About extends Component {
       <div>
         <h1 id="tabelLabel" >About The New University App:</h1>
         <p>This is a demo learning app for "Simple University/Organization", and a MVC "Full Stack Web Project" using:</p>
+        <div style={{ textAlign: 'center' }}>
+          <img src="Learning.gif" alt="Learning" style={{ height: '45%',width: '45%', borderRadius: '15px' }} />
+        </div>
         <ul>
             <li>React.js for client-side code, incorporating HTML (JSX in React), CSS, and JavaScript.</li>
             <li>Bootstrap for layout and styling.</li>
@@ -56,11 +59,19 @@ export class About extends Component {
           Feel free to discover more of my projects on: 
           <a href='https://github.com/AsmaaJAH'>My Github</a>.
         </p>
+
+
+
+        <h2>University Location & Address:</h2>
+
+        <div style={{ textAlign: 'center', margin: '20px 0' }}>
+          <img src="location.png" alt="University Location" style={{ maxWidth: '50%', borderRadius: '20px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }} />
+        </div>
+
         <h1 id="tabelLabel" >The Weather In the University:</h1>
 
         {contents}
       </div>
-
     );
   }
 
@@ -70,3 +81,4 @@ export class About extends Component {
     this.setState({ forecasts: data, loading: false });
   }
 }
+

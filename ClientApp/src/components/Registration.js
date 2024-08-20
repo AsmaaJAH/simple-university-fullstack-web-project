@@ -61,6 +61,18 @@ export class Registration extends Component {
       <div>
         <h1>Applying Form</h1>
         <p>Fill the following registration form then press apply:</p>
+         <div style={{ display: 'flex', justifyContent: 'center', margin: '10px 0' }}>
+          <img 
+            src="apply.gif" 
+            alt="Apply Now" 
+            style={{ 
+              height: '50vh',  // 50% of the viewport height
+              width:'100vh',
+              borderRadius: '20px', 
+              boxShadow: '0 4px 0px rgba(0, 0, 0, 0.2)' 
+            }} 
+          />
+        </div>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Student Name:</label>
