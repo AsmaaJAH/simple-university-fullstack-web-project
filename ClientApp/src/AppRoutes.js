@@ -1,4 +1,4 @@
-import { Register } from "./components/Register";
+import { StudentForm } from "./components/StudentForm";
 import { About } from "./components/About";
 import { Home } from "./components/Home";
 
@@ -8,8 +8,8 @@ const AppRoutes = [
     element: <Home />
   },
   {
-    path: '/register',
-    element: <Register />
+    path: '/form',
+    element: <StudentForm />
   },
   {
     path: '/about',
