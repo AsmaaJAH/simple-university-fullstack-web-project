@@ -1,8 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using university.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllersWithViews();
+
+// Configure EF Core with MySQL
+builder.Services.AddDbContext<UniversityContext>(options =>
+    options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
@@ -17,6 +23,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
+//app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
