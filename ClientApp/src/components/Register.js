@@ -67,7 +67,7 @@ export class Register extends Component {
   render() {
     return (
       <div>
-        <h1>Register</h1>
+        <h1>Applying Form</h1>
         <p>Fill the following registration form then press apply:</p>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
@@ -153,7 +153,6 @@ export class Register extends Component {
           </div>
           <span>&nbsp;&nbsp;</span>
           <p aria-live="polite">Total number of applicants: <strong>{this.state.currentCount}</strong></p>
-
           <button type="submit" className="btn btn-primary">Apply</button>
         </form>
       </div>
