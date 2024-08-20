@@ -3,7 +3,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace university.Data.Migrations
+namespace university.Migrations
 {
     public partial class InitialCreate : Migration
     {
@@ -13,18 +13,20 @@ namespace university.Data.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Students",
+                name: "StudentRegistrations",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "longtext", nullable: false),
-                    Email = table.Column<string>(type: "longtext", nullable: false),
-                    AcademicYear = table.Column<string>(type: "longtext", nullable: false)
+                    StudentId = table.Column<string>(type: "longtext", nullable: false),
+                    ZewailStudent = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    AcademicYear = table.Column<int>(type: "int", nullable: false),
+                    ApplyCount = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Students", x => x.Id);
+                    table.PrimaryKey("PK_StudentRegistrations", x => x.Id);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
         }
@@ -32,7 +34,7 @@ namespace university.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Students");
+                name: "StudentRegistrations");
         }
     }
 }

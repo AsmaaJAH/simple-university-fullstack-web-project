@@ -6,7 +6,7 @@ using university.Data;
 
 #nullable disable
 
-namespace university.Data.Migrations
+namespace university.Migrations
 {
     [DbContext(typeof(UniversityContext))]
     partial class UniversityContextModelSnapshot : ModelSnapshot
@@ -18,27 +18,32 @@ namespace university.Data.Migrations
                 .HasAnnotation("ProductVersion", "6.0.25")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("university.Data.Student", b =>
+            modelBuilder.Entity("university.Models.StudentRegistration", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("AcademicYear")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("AcademicYear")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("ApplyCount")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("StudentId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("ZewailStudent")
+                        .HasColumnType("tinyint(1)");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Students");
+                    b.ToTable("StudentRegistrations");
                 });
 #pragma warning restore 612, 618
         }
